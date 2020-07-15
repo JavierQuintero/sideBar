@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="fontello.css">
+    <title>Document</title>
+</head>
+<style>
+    :root{
+        --colorIcon:#000;
+        --bgIcon:#000;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .social{
+        position: fixed;
+        left: 0;
+        top: 180px;
+        width: 3%;
+        z-index: 2000;
+    }
+    .social ul{
+        display: grid;
+        list-style: none;
+        padding-bottom: 20px;
+        /* border: 1px solid var(--bgIcon); */
+        grid-template-columns: repeat(2, 1fr);
+        transform: rotate(90deg);
+    }
+    .social ul li{
+        transition: all .4s ease-out;
+    }
+            .social ul li:hover a{
+                box-sizing: border-box;
+                border-top: .5px solid #000;
+            }
+
+    .social ul li a{
+        display: inline-block;
+        color: var(--colorIcon);
+        /*outline:1px solid var(--bgIcon);*/
+        width: 100%;
+        text-decoration: none;
+        font-size: 1.3em;
+        padding: 10px 15px;
+    }
+/* --Content of the page */
+    h2{
+        margin: 7%;
+
+        font-size: 2.5em;
+        font-variant: small-caps;
+
+        text-align: center;
+        text-transform: capitalize;
+        letter-spacing: 4px;
+        
+    }
+    .content{
+        width: 70%;
+        margin: auto;
+    }
+    .content p{
+        margin: 5%;
+        font-size: 1.7em;
+    }
+    .content img{
+        display: block;
+        margin: auto;
+    }
+
+    /*btn desde wordpress*/
+
+/*    #qlwapp .qlwapp-toggle:hover{
+        background-color: #00ff00;          =-boton flotante
+        color: #4d4d4d;
+    }*/
+    .cont-float-wapp{
+        --pobtn:27px;
+        position: fixed;
+        bottom: var(--pobtn);
+        right: var(--pobtn);
+        cursor: pointer;
+    }
+    .btn-float-wapp{
+        --tBtn:60px;
+        position: relative;
+        border: 2px solid #000;
+        text-align: center;
+        width: var(--tBtn);
+        height: var(--tBtn);
+        border-radius: 50px;
+        transition: all 300ms linear;
+    }
+    .btn-float-wapp:before{
+        content: '\f2f';
+        font-size: 2.3em;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -55%);
+    }
+        .cont-float-wapp:hover .btn-float-wapp{
+            background-color: #00ff00;
+            border-color: #4d4d4d;
+            color: #4d4d4d;
+        } 
+
+</style>
+<body>
+    <div class="social">
+        <ul>
+            <li><a href="#" class="icon face">Facebook</a></li>
+            <li><a href="#" class="icon tweet">Linkedin</a></li>
+        </ul>
+    </div>
+    <h2>contenido del sitio web</h2>
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat a corporis suscipit sunt numquam excepturi obcaecati eum dicta? Reprehenderit doloribus recusandae nihil neque beatae explicabo laudantium assumenda voluptates itaque architecto.</p>
+        <img src="https://loremflickr.com/320/240?random=1" />
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat a corporis suscipit sunt numquam excepturi obcaecati eum dicta? Reprehenderit doloribus recusandae nihil neque beatae explicabo laudantium assumenda voluptates itaque architecto.</p>
+        <img src="https://loremflickr.com/320/240?random=2" />
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat a corporis suscipit sunt numquam excepturi obcaecati eum dicta? Reprehenderit doloribus recusandae nihil neque beatae explicabo laudantium assumenda voluptates itaque architecto.</p>
+    </div>
+
+    <!-- btn de Whatsapp -->
+
+    <button class="qlwapp-container">
+        <a class="qlwapp-toggle" data-action="open" data-phone="573213385024" data-message="¡Hola! Deseo desarrollar una idea con Graficomio y quisiera tener más información." href="javascript:void(0);" target="_blank">
+                <i class="qlwapp-icon qlwapp-whatsapp-icon"></i>
+                <i class="qlwapp-close" data-action="close">×</i>
+          </a>
+    </button>
+    <div class="cont-float-wapp">
+        <div class="btn-float-wapp"></div>
+    </div> 
+</body>
+</html>
